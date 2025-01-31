@@ -814,6 +814,7 @@
     transform: scale(1.15);
     pointer-events: none;
     user-select: none;
+    filter: brightness(.2);
     z-index: -1;
   }
   
@@ -962,6 +963,7 @@
   .about-banner {
     position: relative;
     margin-block-end: 120px;
+    filter: brightness(.5);
   }
   
   .about-banner > .w-100 { padding-inline-start: 50px; }
