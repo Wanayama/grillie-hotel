@@ -1439,9 +1439,16 @@ textarea.input-field {
   margin-block-end: 40px;
 }
 
-.grid_list{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.grid_list2{
+  width: 90%;
+}
+.val img{
+  width: 350px;
+  height: 400px;
+  margin-left: 10%;
+}
+.val{
+  display: flex;
 }
 
 .event-card {
@@ -1449,40 +1456,20 @@ textarea.input-field {
   overflow: hidden;
 }
 
-.event-card .card-content {
+.card-content {
   background-image: var(--gradient-1);
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
   padding: 35px 35px 25px;
+  margin-left: 10%;
 }
 
-.event-card .publish-date {
-  position: absolute;
-  top: 30px;
-  left: 25px;
-  padding: 5px 10px;
-  color: var(--gold-crayola);
-  background-color: var(--black);
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--letterSpacing-1);
-  line-height: 14px;
-}
-
-.event-card .card-subtitle {
+.card-subtitle {
   color: var(--gold-crayola);
   text-transform: uppercase;
   font-weight: var(--weight-bold);
   letter-spacing: var(--letterSpacing-2);
   margin-block-end: 5px;
-}
-
-.event-card .card-banner .img-cover {
-  transition: var(--transition-2);
-}
-
-.event-card:is(:hover, :focus-within) .img-cover {
-  transform: scale(1.05);
 }
 
 .event .btn {
@@ -1639,6 +1626,15 @@ textarea.input-field {
 /**
    * responsive for larger than 575px screen
    */
+
+   @media (min-width: 320px){
+    .val{
+      flex-direction: column;
+      margin-left: auto;
+      justify-content: center;
+      align-items: center;
+    }
+   }
 
 @media (min-width: 575px) {
   /**
@@ -1820,6 +1816,10 @@ textarea.input-field {
   .event .container {
     max-width: 420px;
     margin-inline: auto;
+  }
+
+  .val{
+    flex-direction: column;
   }
   
   /**
