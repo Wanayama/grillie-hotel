@@ -457,7 +457,7 @@ body.nav-active {
   position: relative;
   padding-block: var(--section-space);
   overflow: hidden;
-  z-index: -1;
+  /* z-index: 1; */
 }
 
 .bg-black-10 {
