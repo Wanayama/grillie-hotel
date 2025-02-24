@@ -1056,6 +1056,7 @@ body.nav-active {
   position: absolute;
   bottom: 5%;
   margin-left: 5%;
+  display: none;
 }
 
  /* Hidden popup container */
@@ -1797,6 +1798,10 @@ textarea.input-field {
       width: 100%;
       margin-right: 5%;
     }
+
+    .herobtn{
+      display: block;
+    }
    }
 
 @media (min-width: 575px) {
@@ -1913,6 +1918,10 @@ textarea.input-field {
     transform: scale(0.7);
   }
 
+  .herobtn{
+    display: block;
+  }
+  
 
   /**
      * SERVICE
@@ -2080,6 +2089,10 @@ textarea.input-field {
     color: var(--black);
   }
 
+  .herobtn{
+    display: none;
+  }
+
   /**
      * RESERVATION
      */
@@ -2147,6 +2160,10 @@ textarea.input-field {
 
   .topbar .item-2 {
     margin-inline-end: auto;
+  }
+
+  .herobtn{
+    display: none;
   }
 
   /**
@@ -2380,6 +2397,10 @@ textarea.input-field {
     transform: scale(1);
   }
 
+  .herobtn{
+    display: none;
+  }
+
   /**
      * SERVICE
      */
@@ -2458,6 +2479,9 @@ textarea.input-field {
     margin-inline: auto;
   }
 
+  .herobtn{
+    display: none;
+  }
   /**
      * ABOUT
      */
