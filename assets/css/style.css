@@ -1106,6 +1106,7 @@ body.nav-active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 9999;
+  overflow-x: scroll;
 }
 .popup-box .sb-ord{
   background-color: #000000;
@@ -1155,7 +1156,6 @@ body.nav-active {
   display: flex;
   gap: 10px;
 }
-
 
 /* .popup-box button:hover {
   background: #218838;
