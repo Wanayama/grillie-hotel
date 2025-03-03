@@ -128,7 +128,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="./assets/menus/Ribs and Rhythm - Food Menu.pdf" class="navbar-link hover-underline">
+              <a href="#service" class="navbar-link hover-underline">
                 <div class="separator"></div>
 
                 <span class="span">Menus</span>
@@ -175,11 +175,15 @@
           </div>
         </nav>
 
-        <a href="#contact" class="btn btn-secondary">
-          <span class="text text-1">Find A Table</span>
+        <div onclick='openPopup()'>
+          <button id="order" class="btn btn-secondary">
+            <span class="text text-1">Order Here</span>
 
-          <span class="text text-2" aria-hidden="true">Find A Table</span>
-        </a>
+            <span class="text text-2" aria-hidden="true"
+              >Order Here</span
+            >
+          </button>
+        </div>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
           <span class="line line-1"></span>
@@ -211,7 +215,7 @@
               </div>
 
               <p class="label-2 section-subtitle slider-reveal">
-                Tradational & Hygine
+                Traditional & Hygine
               </p>
 
               <h1 class="display-1 hero-title slider-reveal">
@@ -324,7 +328,7 @@
             <ion-icon name="chevron-forward"></ion-icon>
           </button>
 
-          <a href="#contact" class="hero-btn has-after">
+          <button onclick='openPopup2()' id="reservation" class="hero-btn has-after">
             <img
               src="./assets/images/hero-icon.png"
               width="48"
@@ -333,7 +337,162 @@
             />
 
             <span class="label-2 text-center span">Book A Table</span>
-          </a>
+          </button>
+
+          <div class="popup-container2" id="popup2">
+            <div class="popup-box2">
+              <span class="close-btn" onclick="closePopup2()">✖</span>
+              <form action="">
+                    <h2 class="headline-3 text-center">Online Reservation</h2>
+    
+                    <p class="form-text text-center">
+                      Booking request
+                      <a href="mailto:douglassachita2@gmail.com" class="link">douglassachita2@gmail.com</a>
+                      or fill out the order form
+                    </p>
+
+                    <div class="myflex">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
+                          autocomplete="off"
+                          class="input-field"
+                        />
+      
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="Phone Number"
+                          autocomplete="off"
+                          class="input-field"
+                        />
+                    </div>
+
+                    
+                        <div class="icon-wrapper2">
+                          <ion-icon
+                            name="person-outline"
+                            aria-hidden="true"
+                          ></ion-icon>
+      
+                          <select name="person" class="input-field">
+                            <option value="1-person">1 Person</option>
+                            <option value="2-person">2 Person</option>
+                            <option value="3-person">3 Person</option>
+                            <option value="4-person">4 Person</option>
+                            <option value="5-person">5 Person</option>
+                            <option value="6-person">6 Person</option>
+                            <option value="7-person">7 Person</option>
+                          </select>
+      
+                          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                        </div>
+      
+                        <div class="icon-wrapper2">
+                          <ion-icon name="fast-food-outline"></ion-icon>
+      
+                          <select name="location" class="input-field">
+                            <option value="1-person">Dining location</option>
+                            <option value="2-person">Indoors</option>
+                            <option value="3-person">Outdoors</option>
+                          </select>
+      
+                          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                        </div>
+                      
+                      
+                        <div class="icon-wrapper2">
+                          <ion-icon
+                            name="calendar-clear-outline"
+                            aria-hidden="true"
+                          ></ion-icon>
+      
+                          <input
+                            type="date"
+                            name="reservation-date"
+                            class="input-field"
+                          />
+      
+                          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                        </div>
+      
+                        <div class="icon-wrapper2">
+                          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+      
+                          <select name="person" class="input-field">
+                            <option value="08:00am">08 : 00 am</option>
+                            <option value="09:00am">09 : 00 am</option>
+                            <option value="010:00am">10 : 00 am</option>
+                            <option value="011:00am">11 : 00 am</option>
+                            <option value="012:00am">12 : 00 am</option>
+                            <option value="01:00pm">01 : 00 pm</option>
+                            <option value="02:00pm">02 : 00 pm</option>
+                            <option value="03:00pm">03 : 00 pm</option>
+                            <option value="04:00pm">04 : 00 pm</option>
+                            <option value="05:00pm">05 : 00 pm</option>
+                            <option value="06:00pm">06 : 00 pm</option>
+                            <option value="07:00pm">07 : 00 pm</option>
+                            <option value="08:00pm">08 : 00 pm</option>
+                            <option value="09:00pm">09 : 00 pm</option>
+                            <option value="10:00pm">10 : 00 pm</option>
+                          </select>
+      
+                          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                        </div>
+                      
+    
+    
+                    <textarea
+                      name="message"
+                      placeholder="Message"
+                      autocomplete="off"
+                      class="input-field"
+                    ></textarea>
+    
+                    <button type="submit" class="btn btn-secondary">
+                      <span class="text text-1">Book A Table</span>
+    
+                      <span class="text text-2" aria-hidden="true"
+                        >Book A Table</span
+                      >
+                    </button>
+                  </form>
+            </div>
+          </div>
+
+
+
+          <div onclick='openPopup()' class="herobtn">
+            <button id="order" class="btn btn-secondary">
+              <span class="text text-1">Order Here</span>
+  
+              <span class="text text-2" aria-hidden="true"
+                >Order Here</span
+              >
+            </button>
+          </div>
+          
+            
+            <div class="popup-container" id="popup">
+              <div class="popup-box">
+                  <span class="close-btn" onclick="closePopup()">✖</span>
+                  <h2>Order Form</h2>
+                  <form>
+                    <div class="myflex">
+                      <input type="text" placeholder="Name" required>
+                      <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="myflex">
+                      <input type="text" placeholder="Location" required>
+                      <input type="text" placeholder="Place Order" required>
+                    </div>
+                      <textarea placeholder="Message" rows="3"></textarea>
+                      <button class="sb-ord" type="submit">Submit</button>
+                  </form>
+              </div>
+            </div>
+          
         </section>
 
         <!-- 
@@ -341,6 +500,7 @@
       -->
 
         <section
+        id="service"
           class="section service bg-black-10 text-center"
           aria-label="service"
         >
@@ -356,7 +516,7 @@
             </p>
 
             <ul class="grid-list">
-              <li>
+              <!-- <li>
                 <div class="service-card">
                   <a href="#" class="has-before hover:shine">
                     <figure
@@ -386,7 +546,7 @@
                     >
                   </div>
                 </div>
-              </li>
+              </li> -->
 
               <li>
                 <div class="service-card">
@@ -787,120 +947,6 @@
         <section class="reservation" id="contact">
           <div class="container">
             <div class="form reservation-form bg-black-10">
-              <form action="" class="form-left">
-                <h2 class="headline-1 text-center">Online Reservation</h2>
-
-                <p class="form-text text-center">
-                  Booking request
-                  <a href="mailto:douglassachita2@gmail.com" class="link">douglassachita2@gmail.com</a>
-                  or fill out the order form
-                </p>
-
-                <div class="input-wrapper">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    autocomplete="off"
-                    class="input-field"
-                  />
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    autocomplete="off"
-                    class="input-field"
-                  />
-                </div>
-
-                <div class="input-wrapper">
-                  <div class="icon-wrapper">
-                    <ion-icon
-                      name="person-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <select name="person" class="input-field">
-                      <option value="1-person">1 Person</option>
-                      <option value="2-person">2 Person</option>
-                      <option value="3-person">3 Person</option>
-                      <option value="4-person">4 Person</option>
-                      <option value="5-person">5 Person</option>
-                      <option value="6-person">6 Person</option>
-                      <option value="7-person">7 Person</option>
-                    </select>
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <div class="icon-wrapper">
-                    <ion-icon name="fast-food-outline"></ion-icon>
-
-                    <select name="location" class="input-field">
-                      <option value="1-person">Dining location</option>
-                      <option value="2-person">Indoors</option>
-                      <option value="3-person">Outdoors</option>
-                    </select>
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <div class="icon-wrapper">
-                    <ion-icon
-                      name="calendar-clear-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <input
-                      type="date"
-                      name="reservation-date"
-                      class="input-field"
-                    />
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <div class="icon-wrapper">
-                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                    <select name="person" class="input-field">
-                      <option value="08:00am">08 : 00 am</option>
-                      <option value="09:00am">09 : 00 am</option>
-                      <option value="010:00am">10 : 00 am</option>
-                      <option value="011:00am">11 : 00 am</option>
-                      <option value="012:00am">12 : 00 am</option>
-                      <option value="01:00pm">01 : 00 pm</option>
-                      <option value="02:00pm">02 : 00 pm</option>
-                      <option value="03:00pm">03 : 00 pm</option>
-                      <option value="04:00pm">04 : 00 pm</option>
-                      <option value="05:00pm">05 : 00 pm</option>
-                      <option value="06:00pm">06 : 00 pm</option>
-                      <option value="07:00pm">07 : 00 pm</option>
-                      <option value="08:00pm">08 : 00 pm</option>
-                      <option value="09:00pm">09 : 00 pm</option>
-                      <option value="10:00pm">10 : 00 pm</option>
-                    </select>
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div>
-                </div>
-
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  autocomplete="off"
-                  class="input-field"
-                ></textarea>
-
-                <button type="submit" class="btn btn-secondary">
-                  <span class="text text-1">Book A Table</span>
-
-                  <span class="text text-2" aria-hidden="true"
-                    >Book A Table</span
-                  >
-                </button>
-              </form>
 
               <div
                 class="form-right text-center"
@@ -958,143 +1004,6 @@
               ></iframe>
             </div> -->
           </div>
-
-          <section class="section features text-center" aria-label="features">
-          <div class="container">
-            <p class="section-subtitle label-2">Home Delivery</p>
-
-            <div class="form reservation-form2 bg-black-10">
-              <form action="" class="form-left">
-                <h2 class="headline-1 section-title">Order here</h2>
-
-                <p class="form-text text-center">
-                  Order request
-                  <a href="mailto:douglassachita2@gmail.com" class="link">douglassachita2@gmail.com</a>
-                  or fill out the order form
-                </p>
-
-                <div class="input-wrapper">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    autocomplete="off"
-                    class="input-field"
-                  />
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    autocomplete="off"
-                    class="input-field"
-                  />
-
-                  <input
-                  type="text"
-                  name="location"
-                  placeholder="Location"
-                  autocomplete="off"
-                  class="input-field"
-                />
-                <input
-                type="text"
-                name="food ordered"
-                placeholder="Enter Order"
-                autocomplete="off"
-                class="input-field"
-              />
-                </div>
-
-                <!-- <div class="input-wrapper">
-                  <div class="icon-wrapper">
-                    <ion-icon
-                      name="person-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <select name="person" class="input-field">
-                      <option value="1-person">1 Person</option>
-                      <option value="2-person">2 Person</option>
-                      <option value="3-person">3 Person</option>
-                      <option value="4-person">4 Person</option>
-                      <option value="5-person">5 Person</option>
-                      <option value="6-person">6 Person</option>
-                      <option value="7-person">7 Person</option>
-                    </select>
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div> -->
-
-                  <!-- <div class="icon-wrapper">
-                    <ion-icon name="fast-food-outline"></ion-icon>
-
-                    <select name="location" class="input-field">
-                      <option value="1-person">Dining location</option>
-                      <option value="2-person">Indoors</option>
-                      <option value="3-person">Outdoors</option>
-                    </select>
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div> -->
-
-                  <!-- <div class="icon-wrapper">
-                    <ion-icon
-                      name="calendar-clear-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <input
-                      type="date"
-                      name="reservation-date"
-                      class="input-field"
-                    />
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div> -->
-
-                  <div class="icon-wrapper">
-                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                    <select name="person" class="input-field">
-                      <option value="08:00am">08 : 00 am</option>
-                      <option value="09:00am">09 : 00 am</option>
-                      <option value="010:00am">10 : 00 am</option>
-                      <option value="011:00am">11 : 00 am</option>
-                      <option value="012:00am">12 : 00 am</option>
-                      <option value="01:00pm">01 : 00 pm</option>
-                      <option value="02:00pm">02 : 00 pm</option>
-                      <option value="03:00pm">03 : 00 pm</option>
-                      <option value="04:00pm">04 : 00 pm</option>
-                      <option value="05:00pm">05 : 00 pm</option>
-                      <option value="06:00pm">06 : 00 pm</option>
-                      <option value="07:00pm">07 : 00 pm</option>
-                      <option value="08:00pm">08 : 00 pm</option>
-                      <option value="09:00pm">09 : 00 pm</option>
-                      <option value="10:00pm">10 : 00 pm</option>
-                    </select>
-
-                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                  </div>
-                </div>
-
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  autocomplete="off"
-                  class="input-field"
-                ></textarea>
-
-                <button type="submit" class="btn btn-secondary">
-                  <span class="text text-1">Place an Order</span>
-
-                  <span class="text text-2" aria-hidden="true"
-                    >Place an Order</span
-                  >
-                </button>
-              </form>
-            </div>
-        </section>
         </section>
 
         <!-- 
@@ -1227,45 +1136,27 @@
           id="event"
           aria-label="event"
         >
-          <div class="container">
+          <di class="container">
             <p class="section-subtitle label-2 text-center">Recent Updates</p>
 
             <h2 class="section-title headline-1 text-center">Upcoming Event</h2>
+            <h3 class="headline-3 text-center">No Events Currently</h3>
 
-            <ul class="grid-list">
-              <li>
-                <div class="event-card has-before hover:shine">
-                  <div
-                    class="card-banner img-holder"
-                    style="--width: 350; --height: 450"
-                  >
-                    <img
-                      src="./assets/images/event-1.png"
-                      width="350"
-                      height="450"
-                      loading="lazy"
-                      alt="Flavour so good you’ll try to eat with your eyes."
-                      class="img-cover"
-                    />
+            <!-- <ul class="grid_list2">
+              <li class="val">
+                  <img src="./assets/images/event-1.png"/>
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">
+                    Valentine's Special
+                  </p>
 
-                    <time class="publish-date label-2" datetime="2025-02-14"
-                      >14/02/2024</time
-                    >
-                  </div>
-
-                  <div class="card-content">
-                    <p class="card-subtitle label-2 text-center">
-                      Valentine's Special
-                    </p>
-
-                    <h3 class="card-title title-2 text-center">
-                      Dine, Wine & shine in love!🍷🌟This Valentine's Day, treat your special someone to an exquisite 6-course gournmet dinner, romantic roses, and enchanting live music.💖
-                    </h3>
-                  </div>
+                  <h3 class="card-title title-2 text-center">
+                    Dine, Wine & shine in love!🍷🌟This Valentine's Day, treat your special someone to an exquisite 6-course gournmet dinner, romantic roses, and enchanting live music.💖
+                  </h3>
                 </div>
               </li>
 
-              <!-- <li>
+              <li>
               <div class="event-card has-before hover:shine">
 
                 <div class="card-banner img-holder" style="--width: 350; --height: 450;">
@@ -1305,7 +1196,7 @@
                 </div>
 
               </div>
-            </li> -->
+            </li>
             </ul>
 
             <a
@@ -1398,7 +1289,7 @@
 
           <ul class="footer-list">
             <li>
-              <a href="#" class="label-2 footer-link hover-underline"
+              <a href="https://www.instagram.com/ribsandrhythmrestaurant?igsh=aXE1OWc5MmR3N3hq" target="_blank" class="label-2 footer-link hover-underline"
                 >Instagram</a
               >
             </li>
